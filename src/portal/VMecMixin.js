@@ -1,6 +1,6 @@
 import { VueComponentController } from "./VueComponentController";
 
-export const VueMecMixin = {
+export const VMecMixin = {
 
     props:{
         listenResize: {type:Boolean, default: false}

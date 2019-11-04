@@ -1,10 +1,10 @@
-import { VueMecMixin } from "./VueMecMixin";
+import { VMecMixin } from "./VMecMixin";
 
 export default {
     installed: false,
     install(Vue, option){
         if(this.installed) return;
-        Vue.mixin(VueMecMixin);
+        Vue.mixin(VMecMixin);
         this.installed = true;
     }
 }

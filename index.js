@@ -1,4 +1,4 @@
-import VueMec from './src/portal/VueMec';
+import VMec from './src/portal/VMec';
 import { AsyncCommand } from './src/core/command/AsyncCommand';
 import { BaseCommand } from './src/core/command/BaseCommand';
 import { SyncCommand } from './src/core/command/SyncCommand';
@@ -33,4 +33,4 @@ export {
     VuexModule
 };
 
-export default VueMec;
+export default VMec;
