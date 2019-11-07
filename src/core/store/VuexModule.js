@@ -149,7 +149,7 @@ export class VuexModule{
                 let actionsFun = actions[key];
                 if(actionsFun.prototype instanceof BaseCommand){
                     re[key] = function(){
-                        actionsFun.exec(...arguments);
+                        return actionsFun.exec(...arguments);
                     };
                 }else{
                     re[key] = actionsFun;
@@ -158,6 +158,7 @@ export class VuexModule{
                 console.log(`无效的actions：${key}`);
             }
         });
+        return re;
     }
 
 }
