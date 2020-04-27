@@ -2,7 +2,7 @@
   "name": "v-mec",
   "version": "1.0.0",
   "description": "a vue hierarchical framework and utils",
-  "main": "index.js",
+  "main": "./dist/v-mec.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node build \"env=dev&a=4\"",
