@@ -1,4 +1,5 @@
 import { BaseCommand } from '../command/BaseCommand';
+import mapActions from "./mapActions";
 
 /**
  * @author Weixiong.Yin
@@ -142,23 +143,7 @@ export class VuexModule{
     }
 
     mapActions(actions){
-        let re = {};
-        let keys = Object.keys(actions);
-        keys.forEach(key=>{
-            if(typeof actions[key] === 'function'){
-                let actionsFun = actions[key];
-                if(actionsFun.prototype instanceof BaseCommand){
-                    re[key] = function(){
-                        return actionsFun.exec(...arguments);
-                    };
-                }else{
-                    re[key] = actionsFun;
-                }
-            }else{
-                console.log(`无效的actions：${key}`);
-            }
-        });
-        return re;
+        return mapActions(actions);
     }
 
 }

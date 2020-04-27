@@ -2,7 +2,6 @@ import VMec from './src/portal/VMec';
 import { AsyncCommand } from './src/core/command/AsyncCommand';
 import { BaseCommand } from './src/core/command/BaseCommand';
 import { SyncCommand } from './src/core/command/SyncCommand';
-import { BaseController } from './src/core/controller/BaseController';
 import { EventBus } from './src/core/event/EventBus';
 import { EventDispatcher } from './src/core/event/EventDispatcher';
 import { AxiosService } from './src/core/service/AxiosService';
@@ -13,6 +12,9 @@ import { Rules } from './src/utils/validator/Rules';
 import { Validator } from './src/utils/validator/Validator';
 import { DomUtil } from './src/utils/DomUtil';
 import { ObjUtil } from './src/utils/ObjUtil';
+import mapActions from "./src/core/store/mapActions";
+import { Loading } from "./src/portal/Loading";
+import { ResizeHandler } from "./src/portal/ResizeHandler";
 
 
 
@@ -25,12 +27,14 @@ export {
     AsyncCommand,
     BaseCommand,
     SyncCommand,
-    BaseController,
     EventBus,
     EventDispatcher,
     AxiosService,
     BaseService,
-    VuexModule
+    VuexModule,
+    mapActions,
+    ResizeHandler,
+    Loading
 };
 
 export default VMec;

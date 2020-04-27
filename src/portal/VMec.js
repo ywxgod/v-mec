@@ -1,10 +1,10 @@
-import { VMecMixin } from "./VMecMixin";
+import {EventBus} from "../core/event/EventBus";
 
 export default {
     installed: false,
     install(Vue, option){
         if(this.installed) return;
-        Vue.mixin(VMecMixin);
+        Vue.prototype.$eventBus = new EventBus();
         this.installed = true;
     }
 }
